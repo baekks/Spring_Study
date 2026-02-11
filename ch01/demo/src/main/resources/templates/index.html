@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>메인페이지</title>
+</head>
+<body>
+<h2>메인</h2>
+<hr>
+<nav>
+    <a href="/hello">hello</a><br>
+    <a href="/list">목록</a>
+    <!-- 글 목록 링크 추가 -->
+    <a href="/board/list">글 목록</a>
+</nav>
+<hr>
+<h3>이름: <span th:text="${name}"></span></h3>
+</body>
+</html>

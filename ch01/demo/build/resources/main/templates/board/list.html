@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<head>
+    <title>목록</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <a th:href="@{/board/write}">글쓰기</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>제목</th>
+            <th>작성자</th>
+        </tr>
+        <tr th:each="b : ${boards}">
+            <td th:text="${b.id}"></td>
+            <td>
+                <a th:href="@{/board/detail/{id}(id=${b.id})}" th:text="${b.title}"></a>
+            </td>
+            <td th:text="${b.writer}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

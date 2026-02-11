@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Page</title>
+</head>
+<body>
+    <h2>Hello</h2>
+    <hr>
+    <nav>
+        <a href="/list">list</a>
+    </nav>
+    <!--  thymeleaf 형식은 속성으로 값을 가져와야해서 th:text="${변수식}" or [[${변수식}]]  -->
+    <h3><span th:text="${person.name}"></span> hello</h3>
+    <h3>[[${person.age}]]</h3>
+
+</body>
+</html>

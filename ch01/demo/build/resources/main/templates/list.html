@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>List Page</title>
+    <style>
+        tr th { border-top: 2px double #333; }
+        tr th, tr td { border-bottom: 1px solid #333; }
+    </style>
+</head>
+<body>
+    <h2>List</h2>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="person, state: ${plist}">
+                <td th:text="${state.index+1}"></td>
+                <td th:text="${person.name}"></td>
+                <td th:text="${person.age}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
